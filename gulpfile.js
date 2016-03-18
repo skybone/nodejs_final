@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 // npm install express --save-dev             <-- For server!
 // npm install gulp-notify                
 
-//DONT FORGET your stylish reporter terminal color file: " .stylishcolors " containing the below uncommented.
+//DONT FORGET your stylish reporter terminal color file: " .stylishcolors " containing the below uncommented for styles!
 
 /*{
     "meta": "gray",
