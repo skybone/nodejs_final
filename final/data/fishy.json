@@ -1,0 +1,45 @@
+[
+    {
+    "fishName": "Brook Trout",
+    "shortName": "Specled Trout",
+    "details" : "The Brook Trout is a famous fish to those of Northern Ontario, and fly fishing enthusiast around the world.",
+    "imageURL" : "assets/images/Brook_trout_1918.jpg"
+  }, {
+    "name": "Rainbow Trout",
+    "shortName": "Rainbow",
+    "details" : "The Brook Trout is a famous fish to those of Northern Ontario, and fly fishing enthusiast around the world.",
+  }, {
+    "name": "Brown Trout",
+    "shortName": "Brown Trout",
+    "details" : "The Brook Trout is a famous fish to those of Northern Ontario, and fly fishing enthusiast around the world.",
+    
+  }, {
+    "name": "Pickerel",
+    "shortName": "Walleye",
+    "details" : "The Brook Trout is a famous fish to those of Northern Ontario, and fly fishing enthusiast around the world.",
+    
+  }
+]
+
+//Version 1 Fish
+/*{
+  "fish_types": [
+    {
+    "long_name": "Brook Trout",
+    "short_name": "Specled Trout",
+    "imageURL" : "assets/images/Brook_trout_1918.jpg",
+    "tags": ["brook", "trout", "speckled trout"]
+  }, {
+    "long_name": "Rainbow Trout",
+    "short_name": "Rainbow",
+    "tags": ["rainbow", "trout", "steelhead"]
+  }, {
+    "long_name": "Brown Trout",
+    "short_name": "Brown Trout",
+    "tags": ["brown", "trout"]
+  }, {
+    "long_name": "Pickerel",
+    "short_name": "Walleye",
+    "tags": ["pickerel", "walleye"]
+  }]
+}*/

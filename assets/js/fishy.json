@@ -1,0 +1,25 @@
+[
+    {
+    "id": 1,
+    "long_name": "Brook Trout",
+    "short_name": "Specled Trout",
+    "imageURL" : "assets/images/Brook_trout_1918.jpg",
+    "tags": ["brook", "trout", "speckled trout"]
+  }, {
+    "long_name": "Rainbow Trout",
+    "short_name": "Rainbow",
+    "imageURL" : "#",
+    "tags": ["rainbow", "trout", "steelhead"]
+  }, {
+    "long_name": "Brown Trout",
+    "short_name": "Brown Trout",
+    "imageURL" : "#",
+    "tags": ["brown", "trout"]
+  }, {
+    "long_name": "Pickerel",
+    "short_name": "Walleye",
+    "imageURL" : "#",
+    "tags": ["pickerel", "walleye"]
+
+  }
+]

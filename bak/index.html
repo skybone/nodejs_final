@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fish Finder</title>
+    <link rel='stylesheet' href="assets/css/fish.css">
+    <link rel="stylesheet" href="assets/font/font-awesome/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script async src="assets/js/skys.js"></script>
+	<script async src="assets/js/trim.js"></script>
+	<!-- <script async src="assets/js/fisher2.js"></script> -->
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body class="background-image">
+<div id="wrapper">
+	<form id="fishForm" class="fishstyle" action="">
+		<div class="formbox">
+		<h1>Fish Finder</h1>
+				<input type="text" id="name" class="fishField" name="name" maxlength="35" placeholder="Search Fish Type" required>
+			<br>
+			<button id="fishbtn" class="fishy" name="submit" type="submit">Search</button>
+			<div class="extraInfo"></div>
+		</div>
+	</form>
+<br>
+	<div class="fishInfo"><p></p></div>
+	<div id="displayFish"><p></p></div>
+</div>
+</body>
+</html>

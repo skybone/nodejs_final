@@ -1,0 +1,178 @@
+@import "normalize";
+@import "fonts";
+
+body {
+	margin: 0 auto;
+	background-color: #fff;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+.background-image {
+  background: no-repeat fixed url(../images/Sunset.jpg);
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-position: 65% center;
+  background-size: cover;
+  position: relative;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 95%;
+	text-align: center;
+	background-color: transparent;
+	height: auto;
+	padding-top: 5px;
+}
+
+h1 {
+	color: #fff;
+	font-family: 'Merriweather-Regular', Arial, Georgia;
+	font-size: 2em;
+	line-height: 1.4em;
+	font-weight: 600;
+	margin-bottom: 10;
+	letter-spacing: 0.05em;
+	text-shadow: 2px 2px 3px #000;
+}
+
+h2 {
+	color: #000;
+	font-family: 'Merriweather-Regular', Arial, Georgia;
+	font-size: 1.5em;
+	line-height: 1.4em;
+	font-weight: 400;
+	margin-bottom: 10;
+	letter-spacing: 0.05em;
+	text-shadow: 2px 2px 3px #000;
+}
+
+.fishy {
+	color: #fff;
+	background-color: green;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: none;
+	padding: 10px;
+	margin: 20px;
+	font-family: 'Lato-Bold', Arial, Sans-Serif;
+}
+
+.fishField {
+	border-radius: 5px;
+	border: 1px solid #bbb;
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	padding: 5px 10px 5px 10px;
+	margin-bottom: 10px;
+	color: #111;
+	background-color: #eee;
+}
+
+.fishField:hover, .fishField:focus {
+	color: #000;
+	background-color: #fff;
+	border-color: #333;
+}
+
+.formbox {
+	background: rgba(0,0,0,0.5);
+	border-radius: 8px;
+	border: none;
+}
+
+p {
+	color: #fff;
+	word-wrap: wrap;
+	text-align: center;
+	text-shadow: 0.7px 0.7px #222;
+	font-size: 1.123em;
+	font-family: 'Lato-Bold', Arial, Sans-Serif;
+}
+
+.error {
+	color: orange;
+	padding-bottom: 3px;
+	text-shadow: 0.7px 0.7px #222;
+	font-size: 1.2em;
+}
+
+.correct {
+	color: limegreen;
+	padding-bottom: 3px;
+	text-shadow: 0.7px 0.7px #222;
+	font-size: 1.2em;
+}
+
+.extraInfo {
+	float: right;
+	display: inline-block;
+}
+
+.responsive {
+	width: 85%;
+	border-radius: 8px;
+	height: 85%;
+}
+
+#displayFish {
+	padding-bottom: 20px !important;
+}
+
+@media (min-width:768px) {
+	#wrapper {
+		margin: 0 auto;
+		width: 75%;
+	}
+
+	.responsive {
+		width: 48%;
+		border-radius: 8px;
+		height: 48%;
+		float: right;
+	}
+
+	.dispFish {
+		float: left;
+		width: 48%;
+		padding: 10px;
+		text-shadow: none;
+		border-radius: 8px;
+		line-height: 1.4em;
+		background: rgba(0,0,0,0.5);
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+}
+
+@media (min-width:992px) {
+	#wrapper {
+		margin: 0 auto;
+		width: 75%;
+	}
+
+	h1 {
+		font-size: 4em;
+	}
+}
+
+@media (min-width:1440px) {
+	#wrapper {
+		margin: 0 auto;
+		width: 75%;
+	}
+
+	h1 {
+		font-size: 6em;
+	}
+}
