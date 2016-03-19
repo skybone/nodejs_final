@@ -1,6 +1,7 @@
 @import "normalize";
 @import "fonts";
 @import "chat";
+
 body {
 	margin: 0 auto;
 	background-color: #fff;
@@ -10,7 +11,7 @@ body {
 }
 
 .background-image {
-  background: no-repeat url(../images/Sunset.jpg);
+  background: no-repeat url(../final/images/Sunset.jpg);
   margin: 0 auto;
   width: 100vw;
   height: 100vh;

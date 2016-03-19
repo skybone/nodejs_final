@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 // npm install express --save-dev             <-- For server!
 // npm install gulp-notify                
 
-//DONT FORGET your stylish reporter terminal color file: " .stylishcolors " containing the below uncommented for styles!
+//DONT FORGET your stylish reporter terminal color file: " .stylishcolors " containing the below uncommented.
 
 /*{
     "meta": "gray",
@@ -55,7 +55,7 @@ uglify = require('gulp-uglify'),
 imagemin = require('gulp-imagemin'),
 
 // Check to see if compressed already
-//cache = require('gulp-cache'),
+cache = require('gulp-cache'),
 
 // Sass
 sass = require('gulp-sass'),
@@ -81,15 +81,61 @@ http.listen(8081, function(){
 });*/
 
 gulp.task('express', function() {
+
   var app = require('express')();
+  //var http = require('http').createServer(handler)
   var http = require('http').Server(app);
   var io = require('socket.io')(http);
 
+  function handler (req, res) {
+
+  var filePath = req.url;
+
+  if (filePath == '/') {
+      filePath = './index.html';
+  } else {
+      filePath = './final' + req.url;
+  }
+
+  var extname = path.extname(filePath);
+  var contentType = 'text/html';
+
+  switch (extname) {
+    case '.js':
+        contentType = 'text/javascript';
+        break;
+    case '.css':
+        contentType = 'text/css';
+        break;
+  }
+
+  path.exists(filePath, function(exists) {
+
+    if (exists) {
+        fs.readFile(filePath, function(error, content) {
+            if (error) {
+                res.writeHead(500);
+                res.end();
+            }
+            else {
+                res.writeHead(200, { 'Content-Type': contentType });
+                res.end(content, 'utf-8');
+            }
+        });
+    }
+    else {
+        res.writeHead(404);
+        res.end();
+    }
+  });
+}
+
   app.use('/', function(req, res){
-    res.sendfile(__dirname + 'index.html');
+    /*res.set('Content-Type', "utf8");*/
+    res.sendFile(__dirname + '/index.html');
   });
 
-  io.emit('some event', { for: 'everyone' });
+  io.emit('eventer', { for: 'everyone' });
     
   io.on('connection', function(socket){
     socket.on('chat message', function(msg){
@@ -185,7 +231,7 @@ gulp.task('watch', function() {
 
     livereload.listen();             
 // Add this script file before <body> in html document for live reload. 
-// <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+// <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');</script>
 
 //save gulp.watch('src/scripts/**/*.js', ['scripts']);
     gulp.watch('assets/js/*.js', ['scripts']);

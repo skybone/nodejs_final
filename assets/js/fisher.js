@@ -13,7 +13,7 @@ function fishChecker(){
   var valid = /^[a-zA-Z ]+$/; 
   var test = valid.test(fishForm.fish.value);
   var fishVal = trim(fishForm.fish.value);
-  if(fishVal == "" || !test){
+  if(fishVal === "" || !test){
     fishForm.fish.style.boxShadow = "0px 0px 6px 1px orange";
     setMessage(fishForm.fish, "error", "<i class='fa fa-times'></i>"  + "Please enter a fish name.");
     fishForm.fishbtn.style.visibility ='hidden';
